@@ -70,6 +70,16 @@ angular.module('niographADMWebApp')
 				   $state.go("edukone.admSummary");
 				 
 			 }
+
+			 $scope.searchSchoolWithLocation= function(user){
+				  $scope.addNCollege=user.addCollege;
+				  $scope.addNLocation=user.addLocation;
+				  $http.get('/Schools').success(function(data){
+ 					console.log(data);
+					});
+				   $state.go("edukone.admSummary");
+				 
+			 }
 		       
 
 			 $scope.somePlaceholder='new index';

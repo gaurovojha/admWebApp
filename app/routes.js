@@ -12,6 +12,7 @@ module.exports = function(app) {
 	});
 
 	app.get('/schools', function(req, res) {
+		console.log('fetching all schools');
 		School.find({}, function(err, schools){
 			console.log(schools);
 			res.send(JSON.stringify(schools));
